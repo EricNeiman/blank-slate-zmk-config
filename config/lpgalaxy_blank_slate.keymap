@@ -15,7 +15,7 @@
 / {
     chosen {
         zmk,matrix_transform = &dual_2u_transform;
-    }
+    };
 
     macros {
       ctrl_alt_home: ctrl_alt_home {
