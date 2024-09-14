@@ -13,6 +13,10 @@
 #define TBLE_DUAL_2U 1
 
 / {
+    chosen {
+        zmk,matrix_transform = &dual_2u_transform;
+    }
+
     macros {
       ctrl_alt_home: ctrl_alt_home {
         compatible = "zmk,behavior-macro";
@@ -69,7 +73,6 @@
 / {
   conditional_layers {
     compatible = "zmk,conditional-layers";
-    &dual_2u_transform;
     tri_layer {
       if-layers = <1 2>;
       then-layer = <3>;
@@ -77,7 +80,7 @@
   };
 };
 
- / {
+/ {
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
